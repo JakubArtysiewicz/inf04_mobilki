@@ -1,10 +1,14 @@
 package com.example.inf04mobilka
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +20,26 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-    }
+
+        var wylaczoneorwlaczone = "W"
+    val numer_prania_text = findViewById<TextView>(R.id.numer_prania_text)
+    val zatwierdz_button = findViewById<Button>(R.id.zatwierdz)
+        val wlacz_button = findViewById<Button>(R.id.wlacz)
+
+
+
+        zatwierdz_button.setOnClickListener {
+            val numer_prania = findViewById<TextInputEditText>(R.id.numer_prania).text.toString()
+            numer_prania_text.text = "Numer prania: $numer_prania"
+        }
+        wlacz_button.setOnClickListener {
+            if(wylaczoneorwlaczone == "W"){
+                wylaczoneorwlaczone = "Wy"
+            }
+            else{
+                wylaczoneorwlaczone = "Wy"
+            }
+            val wlacz_text_text = findViewById<TextView>(R.id.wlacz_text).text
+        }
+}
 }

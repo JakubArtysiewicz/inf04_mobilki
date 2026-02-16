@@ -15,19 +15,20 @@
         android:layout_marginTop="28dp"
         android:text="Urządzenia Domowe"
         android:textSize="28sp"
+        app:barrierMargin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="164dp"
-        android:layout_height="223dp"
+        android:layout_height="150dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pralka" />
 
     <TextView
@@ -35,37 +36,29 @@
         android:layout_width="64dp"
         android:layout_height="31dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="152dp"
         android:text="Pralka"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="112dp"
         android:layout_height="33dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="320dp"
         android:text="Odkurzacz"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="221dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="189dp">
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/numer_prania"
         android:layout_width="211dp"
         android:layout_height="51dp"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="12dp"
         android:background="#87CEEB"
         android:hint="Podaj nr prania 1..12"
         android:inputType="number"
@@ -76,27 +69,30 @@
         android:id="@+id/zatwierdz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="8dp"
+        android:background="#4169E1"
         android:text="Zatwierdz"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:barrierMargin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numer_prania" />
 
     <TextView
         android:id="@+id/numer_prania_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="8dp"
         android:text="Numer prania: Nie podano"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zatwierdz" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="163dp"
-        android:layout_height="301dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="178dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/odkurzacz" />
@@ -105,9 +101,11 @@
         android:id="@+id/wlacz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="4dp"
+        android:background="#4169E1"
         android:text="Włącz"
+        app:barrierMargin="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -115,29 +113,30 @@
         android:id="@+id/wlacz_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="8dp"
         android:text="odkurzacz wyłączony"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wlacz" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
         android:text="Status: Naładowany"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wlacz_text" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:text="numer zdającego: 00200320"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 

@@ -21,25 +21,30 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var wylaczoneorwlaczone = "W"
-    val numer_prania_text = findViewById<TextView>(R.id.numer_prania_text)
-    val zatwierdz_button = findViewById<Button>(R.id.zatwierdz)
+        var wlaczony = false;
+        val numer_prania_text = findViewById<TextView>(R.id.numer_prania_text)
+        val zatwierdz_button = findViewById<Button>(R.id.zatwierdz)
         val wlacz_button = findViewById<Button>(R.id.wlacz)
-
 
 
         zatwierdz_button.setOnClickListener {
             val numer_prania = findViewById<TextInputEditText>(R.id.numer_prania).text.toString()
             numer_prania_text.text = "Numer prania: $numer_prania"
         }
+
         wlacz_button.setOnClickListener {
-            if(wylaczoneorwlaczone == "W"){
-                wylaczoneorwlaczone = "Wy"
+            var wlacz_text_text = findViewById<TextView>(R.id.wlacz_text)
+            wlaczony = !wlaczony
+            if(wlaczony){
+                wlacz_text_text.text = "Odkurzacz Włączony"
+                wlacz_button.text = "Wyłącz"
             }
             else{
-                wylaczoneorwlaczone = "Wy"
+                if(!wlaczony){
+                    wlacz_text_text.text = "Odkurzacz Wyłączony"
+                    wlacz_button.text = "Włącz"
+                }
             }
-            val wlacz_text_text = findViewById<TextView>(R.id.wlacz_text).text
         }
 }
 }
